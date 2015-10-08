@@ -17,6 +17,6 @@ import Foundation
 public func debugLog(message: String, functionName: String = __FUNCTION__, fileName: String = __FILE__, lineNumber: Int = __LINE__) {
   #if DEBUG
     let className = (fileName as NSString).lastPathComponent
-    print("<\(className)> \(functionName) [#\(lineNumber)]| \(message)")
+    print("<\(className)> \(functionName) [#\(lineNumber)]| \(message)\n")
   #endif
 }
