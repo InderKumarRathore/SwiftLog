@@ -14,9 +14,9 @@ import Foundation
 ///
 /// To make it work you must set the "DEBUG" symbol, set it in the "Swift Compiler - Custom Flags" section, "Other Swift Flags" line.
 /// You add the DEBUG symbol with the -D DEBUG entry.
-public func debugLog(message: String, functionName: String = __FUNCTION__, fileName: String = __FILE__, lineNumber: Int = __LINE__) {
+public func debugLog(object: Any, functionName: String = __FUNCTION__, fileName: String = __FILE__, lineNumber: Int = __LINE__) {
   #if DEBUG
     let className = (fileName as NSString).lastPathComponent
-    print("<\(className)> \(functionName) [#\(lineNumber)]| \(message)\n")
+    print("<\(className)> \(functionName) [#\(lineNumber)]| \(object)\n")
   #endif
 }
